@@ -1,2 +1,3 @@
 # Path: ./backend/.gitignore
 node_modules
+.env

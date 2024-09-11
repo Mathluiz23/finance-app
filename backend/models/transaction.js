@@ -29,3 +29,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Transaction;
 };
+
+module.exports.Transaction = Transaction;

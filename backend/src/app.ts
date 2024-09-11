@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import { json } from 'body-parser';
-import sequelize from './config/database';
+import sequelize from '../config/database';
+import transactionRoutes from './routes/transactionRoute';
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(json());
 app.get('/', (req, res) => {
   res.send('Finance App API is running');
 });
+
+app.use('/api', transactionRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
